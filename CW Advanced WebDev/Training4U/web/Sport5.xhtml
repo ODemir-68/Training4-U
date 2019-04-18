@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <body>
+
+        <ui:composition template="./deafultTemplate.xhtml">
+
+            <ui:define name="top">
+                <h3><h:outputText value="Tennis"/></h3>
+            </ui:define>
+
+            <ui:define name="left">
+                <ul>
+                    <li>
+                        <h:form> 
+                            <h:commandLink action="mainPage" value="Main Menu"/>
+                        </h:form>
+                    </li>
+                    <li>
+                        <h:form> 
+                            <h:commandLink action="Sport01" value="Body Pump Lessons"/>
+                        </h:form>
+                    </li>
+                    <li>
+                        <h:form>
+                            <h:commandLink action="Sport2" value="Yoga Lessons "/>
+                        </h:form>
+                    </li>
+                    <li>
+                        <h:form>
+                            <h:commandLink action="Sport3" value="Zumba Lessons "/>
+                        </h:form>
+                    </li>
+                    <li>
+                        <h:form>
+                            <h:commandLink action="Sport4" value="Golf Lessons "/>
+                        </h:form>
+                    </li>
+                    <li>
+                        <h:form>
+                            <h:commandLink action="Sport5" value="Tennis Lessons "/>
+                        </h:form>
+                    </li>
+                </ul>
+            </ui:define>
+
+            <ui:define name="content">
+                content
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

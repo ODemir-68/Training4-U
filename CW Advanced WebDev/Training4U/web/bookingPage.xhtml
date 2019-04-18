@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body>
+
+        <ui:composition template="./deafultTemplate.xhtml">
+
+            <ui:define name="top">
+                <h3><h:outputText value="Booking a Lesson"/></h3>
+            </ui:define>
+
+            <ui:define name="left">
+
+            </ui:define>
+
+            <ui:define name="content">
+                    <h:form>
+                     <h:panelGrid columns="2" border="1">
+                        <f:facet name="header">	
+                          <h:outputText value="Booking"/>	
+                        </f:facet>	
+                         <h:outputText value="Enter Name"/>
+                         <h:inputText value="#{training4UBean.firstOperand}"/>
+                         <h:outputText value="Enter Phone number"/>
+                         <h:inputText value="#{training4UBean.secondOperand}"/>
+                         <f:facet name="footer">
+
+                        </f:facet>                          
+
+                     </h:panelGrid>
+                    <h:commandLink onclick="if(!confirm('Do you want to book a Lesson?')) return false"
+                                   value="Book Lesson"
+                                   action="#{training4UBean.setAvailableLesson(item)}"
+                                   rendered="#{item.availablelessons > 0}">
+                    </h:commandLink> 
+                     </h:form>
+            </ui:define>
+        </ui:composition>
+
+    </body>
+</html>
